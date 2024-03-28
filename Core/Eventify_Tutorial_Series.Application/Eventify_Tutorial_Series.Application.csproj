@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Eventify_Tutorial_Series.Domain\Eventify_Tutorial_Series.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
