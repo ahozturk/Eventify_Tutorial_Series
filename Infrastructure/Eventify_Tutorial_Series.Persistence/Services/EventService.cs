@@ -42,12 +42,14 @@ namespace Eventify_Tutorial_Series.Persistence.Services
 
         public async Task<IEnumerable<EventDTO>> GetAllEventsAsync(Pagination pagination)
         {
-            return await _context.Events.Select(x => new EventDTO()
-            {
-                Title = x.Title,
-                Date = x.Date,
-                Location = x.Location,
-            })
+            return await _context.Events
+                .AsNoTracking()
+                .Select(x => new EventDTO()
+                {
+                    Title = x.Title,
+                    Date = x.Date,
+                    Location = x.Location,
+                })
                 .Skip(pagination.PageCount * pagination.ItemCount)
                 .Take(pagination.ItemCount)
                 .ToListAsync();
