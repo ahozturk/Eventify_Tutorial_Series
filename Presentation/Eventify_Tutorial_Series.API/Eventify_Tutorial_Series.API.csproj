@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\..\Core\Eventify_Tutorial_Series.Application\Eventify_Tutorial_Series.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Eventify_Tutorial_Series.Infrastructure\Eventify_Tutorial_Series.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Eventify_Tutorial_Series.Persistence\Eventify_Tutorial_Series.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
