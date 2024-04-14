@@ -20,7 +20,7 @@ namespace Eventify_Tutorial_Series.Infrastructure.Services
             foreach (var eventItem in eventItems)
             {
                 if (eventItem is not null)
-                    stringBuilder.AppendLine($"Event: {eventItem.Title} - Location: {eventItem.Location} - Date: {eventItem.Date.ToString("HH:mm - dd/MM/yyyy")}");
+                    stringBuilder.AppendLine($"Event: {eventItem.Title} - Location: {eventItem.Location.City} - Date: {eventItem.Date.ToString("HH:mm - dd/MM/yyyy")}");
             }
 
             return stringBuilder.ToString().TrimEnd();
